@@ -1,8 +1,8 @@
-import React from 'react';
-import Header from './components/header';
-import { Content } from './components/content';
-import { ProjectsProvider, SelectedProjectProvider } from './context';
-import './App.css'
+import React from "react";
+import Header from "./components/header";
+import { Content } from "./components/content";
+import { ProjectsProvider, SelectedProjectProvider } from "./context";
+import "./App.css";
 
 export default function App (){
   return (
