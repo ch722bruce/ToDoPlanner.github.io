@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useProjectsValue } from '../context';
+import React from "react";
+import PropTypes from "prop-types";
+import { useProjectsValue } from "../context";
 
 export const ProjectOverlay = ({
   setProject,
@@ -23,7 +23,7 @@ export const ProjectOverlay = ({
                   setShowProjectOverlay(false);
                 }}
                 onKeyDown={(e) => {
-                  if (e.key === 'Enter') {
+                  if (e.key === "Enter") {
                     setProject(project.projectId);
                     setShowProjectOverlay(false);
                   }

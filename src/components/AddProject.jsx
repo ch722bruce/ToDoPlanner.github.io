@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { useProjectsValue } from '../context';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useProjectsValue } from "../context";
 
 export const AddProject = ({ shouldShow = false }) => {
   const [show, setShow] = useState(shouldShow);
-  const [projectName, setProjectName] = useState('');
+  const [projectName, setProjectName] = useState("");
 
   const projectId = 1;
   const { projects, setProjects } = useProjectsValue();
@@ -39,7 +39,7 @@ export const AddProject = ({ shouldShow = false }) => {
             className="add-project__cancel"
             onClick={() => setShow(false)}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') setShow(false);
+              if (e.key === "Enter") setShow(false);
             }}
             role="button"
             tabIndex={0}
@@ -55,7 +55,7 @@ export const AddProject = ({ shouldShow = false }) => {
         className="add-project__text"
         onClick={() => setShow(!show)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') setShow(!show);
+          if (e.key === "Enter") setShow(!show);
         }}
         role="button"
         tabIndex={0}

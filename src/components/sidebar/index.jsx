@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   FaChevronDown,
   FaInbox,
   FaRegCalendarAlt,
   FaRegCalendar,
-} from 'react-icons/fa';
-import { Projects } from '../Projects';
-import { useSelectedProjectValue } from '../../context';
-import { AddProject } from '../AddProject';
+} from "react-icons/fa";
+import { Projects } from "../Projects";
+import { useSelectedProjectValue } from "../../context";
+import { AddProject } from "../AddProject";
 
 export default function Sidebar(){
   const { setSelectedProject } = useSelectedProjectValue();
-  const [active, setActive] = useState('inbox');
+  const [active, setActive] = useState("inbox");
   const [showProjects, setShowProjects] = useState(true);
 
   return (
@@ -19,7 +19,7 @@ export default function Sidebar(){
       <ul className="sidebar__generic">
         <li
           data-testid="inbox"
-          className={active === 'inbox' ? 'active' : undefined}
+          className={active === "inbox" ? "active" : undefined}
         >
           <div
             data-testid="inbox-action"
@@ -27,13 +27,13 @@ export default function Sidebar(){
             tabIndex={0}
             role="button"
             onClick={() => {
-              setActive('inbox');
-              setSelectedProject('INBOX');
+              setActive("inbox");
+              setSelectedProject("INBOX");
             }}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                setActive('inbox');
-                setSelectedProject('INBOX');
+              if (e.key === "Enter") {
+                setActive("inbox");
+                setSelectedProject("INBOX");
               }
             }}
           >
@@ -45,7 +45,7 @@ export default function Sidebar(){
         </li>
         <li
           data-testid="today"
-          className={active === 'today' ? 'active' : undefined}
+          className={active === "today" ? "active" : undefined}
         >
           <div
             data-testid="today-action"
@@ -53,13 +53,13 @@ export default function Sidebar(){
             tabIndex={0}
             role="button"
             onClick={() => {
-              setActive('today');
-              setSelectedProject('TODAY');
+              setActive("today");
+              setSelectedProject("TODAY");
             }}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                setActive('today');
-                setSelectedProject('TODAY');
+              if (e.key === "Enter") {
+                setActive("today");
+                setSelectedProject("TODAY");
               }
             }}
           >
@@ -71,7 +71,7 @@ export default function Sidebar(){
         </li>
         <li
           data-testid="next_7"
-          className={active === 'next_7' ? 'active' : undefined}
+          className={active === "next_7" ? "active" : undefined}
         >
           <div
             data-testid="next_7-action"
@@ -79,13 +79,13 @@ export default function Sidebar(){
             tabIndex={0}
             role="button"
             onClick={() => {
-              setActive('next_7');
-              setSelectedProject('NEXT_7');
+              setActive("next_7");
+              setSelectedProject("NEXT_7");
             }}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') {
-                setActive('next_7');
-                setSelectedProject('NEXT_7');
+              if (e.key === "Enter") {
+                setActive("next_7");
+                setSelectedProject("NEXT_7");
               }
             }}
           >
@@ -101,14 +101,14 @@ export default function Sidebar(){
         aria-label="Show/hide projects"
         onClick={() => setShowProjects(!showProjects)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') setShowProjects(!showProjects);
+          if (e.key === "Enter") setShowProjects(!showProjects);
         }}
         role="button"
         tabIndex={0}
       >
         <span>
           <FaChevronDown
-            className={!showProjects ? 'hidden-projects' : undefined}
+            className={!showProjects ? "hidden-projects" : undefined}
           />
         </span>
         <h2>Projects</h2>

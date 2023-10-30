@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { FaRegListAlt, FaRegCalendarAlt } from 'react-icons/fa';
-import moment from 'moment';
-import PropTypes from 'prop-types';
-import { useSelectedProjectValue } from '../context';
-import { ProjectOverlay } from './ProjectOverlay';
-import { TaskDate } from './TaskDate';
+import React, { useState } from "react";
+import { FaRegListAlt, FaRegCalendarAlt } from "react-icons/fa";
+import moment from "moment";
+import PropTypes from "prop-types";
+import { useSelectedProjectValue } from "../context";
+import { ProjectOverlay } from "./ProjectOverlay";
+import { TaskDate } from "./TaskDate";
 
 export const AddTask = ({
   showAddTaskMain = true,
@@ -12,9 +12,9 @@ export const AddTask = ({
   showQuickAddTask,
   setShowQuickAddTask,
 }) => {
-  const [task, setTask] = useState('');
-  const [taskDate, setTaskDate] = useState('');
-  const [project, setProject] = useState('');
+  const [task, setTask] = useState("");
+  const [taskDate, setTaskDate] = useState("");
+  const [project, setProject] = useState("");
   const [showMain, setShowMain] = useState(shouldShowMain);
   const [showProjectOverlay, setShowProjectOverlay] = useState(false);
   const [showTaskDate, setShowTaskDate] = useState(false);
@@ -23,12 +23,12 @@ export const AddTask = ({
 
   const addTask = () => {
     const projectId = project || selectedProject;
-    let collatedDate = '';
+    let collatedDate = "";
 
-    if (projectId === 'TODAY') {
-      collatedDate = moment().format('DD/MM/YYYY');
-    } else if (projectId === 'NEXT_7') {
-      collatedDate = moment().add(7, 'days').format('DD/MM/YYYY');
+    if (projectId === "TODAY") {
+      collatedDate = moment().format("DD/MM/YYYY");
+    } else if (projectId === "NEXT_7") {
+      collatedDate = moment().add(7, "days").format("DD/MM/YYYY");
     }
 
     return (
@@ -40,7 +40,7 @@ export const AddTask = ({
 
   return (
     <div
-      className={showQuickAddTask ? 'add-task add-task__overlay' : 'add-task'}
+      className={showQuickAddTask ? "add-task add-task__overlay" : "add-task"}
       data-testid="add-task-comp"
     >
       {showAddTaskMain && (
@@ -49,7 +49,7 @@ export const AddTask = ({
           data-testid="show-main-action"
           onClick={() => setShowMain(!showMain)}
           onKeyDown={(e) => {
-            if (e.key === 'Enter') setShowMain(!showMain);
+            if (e.key === "Enter") setShowMain(!showMain);
           }}
           tabIndex={0}
           aria-label="Add task"
@@ -76,7 +76,7 @@ export const AddTask = ({
                     setShowQuickAddTask(false);
                   }}
                   onKeyDown={(e) => {
-                    if (e.key === 'Enter') {
+                    if (e.key === "Enter") {
                       setShowMain(false);
                       setShowProjectOverlay(false);
                       setShowQuickAddTask(false);
@@ -129,7 +129,7 @@ export const AddTask = ({
                 setShowProjectOverlay(false);
               }}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') {
+                if (e.key === "Enter") {
                   setShowMain(false);
                   setShowProjectOverlay(false);
                 }
@@ -146,7 +146,7 @@ export const AddTask = ({
             data-testid="show-project-overlay"
             onClick={() => setShowProjectOverlay(!showProjectOverlay)}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') setShowProjectOverlay(!showProjectOverlay);
+              if (e.key === "Enter") setShowProjectOverlay(!showProjectOverlay);
             }}
             tabIndex={0}
             role="button"
@@ -158,7 +158,7 @@ export const AddTask = ({
             data-testid="show-task-date-overlay"
             onClick={() => setShowTaskDate(!showTaskDate)}
             onKeyDown={(e) => {
-              if (e.key === 'Enter') setShowTaskDate(!showTaskDate);
+              if (e.key === "Enter") setShowTaskDate(!showTaskDate);
             }}
             tabIndex={0}
             role="button"

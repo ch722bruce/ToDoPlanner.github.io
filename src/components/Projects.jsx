@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { useSelectedProjectValue, useProjectsValue } from '../context';
-import { IndividualProject } from './IndividualProject';
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import { useSelectedProjectValue, useProjectsValue } from "../context";
+import { IndividualProject } from "./IndividualProject";
 
 export const Projects = ({ activeValue = null }) => {
   const [active, setActive] = useState(activeValue);
@@ -17,8 +17,8 @@ export const Projects = ({ activeValue = null }) => {
         data-doc-id={project.docId}
         className={
           active === project.projectId
-            ? 'active sidebar__project'
-            : 'sidebar__project'
+            ? "active sidebar__project"
+            : "sidebar__project"
         }
       >
         <div
@@ -31,7 +31,7 @@ export const Projects = ({ activeValue = null }) => {
             setSelectedProject(project.projectId);
           }}
           onKeyDown={(e) => {
-            if (e.key === 'Enter') {
+            if (e.key === "Enter") {
               setActive(project.projectId);
               setSelectedProject(project.projectId);
             }

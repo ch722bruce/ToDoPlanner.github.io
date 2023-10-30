@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { AddTask } from '../AddTask';
-import logo from '../../assets/logo.png'
+import React, { useState } from "react";
+import { AddTask } from "../AddTask";
+import logo from "../../assets/logo.png";
 
 export default function Header(){
   const [shouldShowMain, setShouldShowMain] = useState(false);
