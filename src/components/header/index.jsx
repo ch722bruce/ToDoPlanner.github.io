@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { FaPizzaSlice } from 'react-icons/fa';
-import PropTypes from 'prop-types';
 import { AddTask } from '../AddTask';
 import logo from '../../assets/logo.png'
 
