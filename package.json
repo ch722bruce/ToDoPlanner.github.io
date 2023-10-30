@@ -4,13 +4,18 @@
   "description": "ToDo Planner serves as an integral tool for individuals aiming to manage their daily tasks more effectively. By allowing users to note down, edit, and categorize their tasks, we hope to simplify the process of organizing one's day and ensuring that nothing gets missed.",
   "type": "module",
   "scripts": {
+    "start": "node ./node_modules/nodemon/bin/nodemon.js index.js",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
     "moment": "^2.29.4",
+    "mongodb": "^6.2.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -36,6 +41,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "nodemon": "^3.0.1",
     "prettier": "^3.0.3",
     "vite": "^4.4.5"
   }

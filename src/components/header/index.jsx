@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaPizzaSlice } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import { AddTask } from '../AddTask';
+import logo from '../../assets/logo.png'
 
 export default function Header(){
   const [shouldShowMain, setShouldShowMain] = useState(false);
@@ -11,7 +12,7 @@ export default function Header(){
     <header className="header" data-testid="header">
       <nav>
         <div className="logo">
-          <img src="./src/assets/logo.png" alt="Todoist" />
+          <img src={logo} alt="Todoist" />
         </div>
         <div className="settings">
           <ul>
